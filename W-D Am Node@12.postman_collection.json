@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "a01f59af-f0dd-431a-b7bc-a1096707927a",
+		"name": "W/D Am Node@12",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20203345"
+	},
+	"item": [
+		{
+			"name": "getAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NDkyZDRiZGQxNWE2NzkyNzIwYTEwMCIsImVtYWlsIjoiYW1hbnRpd2FyaTg4NjFAZ21haWwuY29tIiwibmFtZSI6IkFtYW4gVGl3YXJpIiwiaWF0IjoxNzQ5NzEyNjE2LCJleHAiOjE3NDk3MTYyMTZ9.t0Bbw-mOHSe5dw4hq9AG5aRkjQuzpSNwEhl4Fz55Yi4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "homepage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aman Tiwari\",\r\n    \"gender\":\"M\",\r\n    \"mobileNo\":9891062743,\r\n    \"isMember\":true,\r\n    \"dob\":\"1999-04-22\",\r\n    \"fee\":12000,\r\n    \"email\":\"amantiwari8861@gmail.com\",\r\n    \"password\":\"1234\",\r\n    \"localAddress\":{\r\n        \"city\":\"Noida\",\r\n        \"state\":\"UP\",\r\n        \"country\":\"India\",\r\n        \"street\":\"sector 62 noida\",\r\n        \"pincode\":201301\r\n    },\r\n    \"skills\":[\"MEAN\"],\r\n    \"courses\":[\r\n        {\r\n            \"courseName\":\"Java FSD with AI\",\r\n            \"courseDuration\":\"7 Month\",\r\n            \"courseFee\":50000\r\n        },\r\n        {\r\n            \"courseName\":\"MERN Stack with AI\",\r\n            \"courseDuration\":\"7 Month\",\r\n            \"courseFee\":45000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"amantiwari8861@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Aman 2\",\r\n    \"gender\":\"M1\",\r\n    \"mobileNo\":35768742442,\r\n    \"isMember\":false,\r\n    \"dob\":\"1999-04-21\",\r\n    \"fee\":15000,\r\n    \"email\":\"amantiwari8862@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"localAddress\":{\r\n        \"city\":\"GGM\",\r\n        \"state\":\"UP\",\r\n        \"country\":\"India\",\r\n        \"street\":\"sector 62 noida\",\r\n        \"pincode\":201301\r\n    },\r\n    \"skills\":[\"MERN\"],\r\n    \"courses\":[\r\n        {\r\n            \"courseName\":\"Java FSD\",\r\n            \"courseDuration\":\"7 Month\",\r\n            \"courseFee\":50000\r\n        },\r\n        {\r\n            \"courseName\":\"MERN Stack With AI\",\r\n            \"courseDuration\":\"7 Month\",\r\n            \"courseFee\":45000\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user/6849260e15705a8a84872090",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"6849260e15705a8a84872090"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user/6847e2980c17c3ef8673d7f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"6847e2980c17c3ef8673d7f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user/6847e2980c17c3ef8673d7f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"6847e2980c17c3ef8673d7f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user/email/vhvdhjvbdjv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"email",
+						"vhvdhjvbdjv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by phone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/user/phone/68732",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"phone",
+						"68732"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
