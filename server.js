@@ -3,7 +3,6 @@ require("dotenv").config();
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const xss = require('xss-clean');
 const { body, validationResult } = require('express-validator');
 const path = require("path");
 const express = require("express");
@@ -31,9 +30,6 @@ server.use(cors(corsOptions));
 // Body parsers
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
-
-// XSS protection
-// server.use(xss());
 
 // Rate Limiting (e.g. 100 requests per 15 minutes)
 const limiter = rateLimit({
@@ -64,5 +60,6 @@ server.listen(PORT, HOST_NAME, () => {
     console.log(`server is running on http://${HOST_NAME}:${PORT}`);
 });
 
-
-// npm install jsonwebtoken
+server.on("error", (err) => {
+    console.error("Error :", err);
+});

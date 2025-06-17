@@ -26,7 +26,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
     "morgan": "^1.10.0",
-    "pug": "^3.0.3",
-    "xss-clean": "^0.1.4"
+    "pug": "^3.0.3"
   }
 }
